@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Movie Poster</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/film-industry/78/Movie_icons-01-512.png">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#top_movies").hide();
+                $("#top_tv_shows").hide();
+                $("#top_fiction").hide();
+                $("#top_non_fiction").hide();
+
+                $("#btnMovies").click(function() {
+                    $("#top_movies").fadeToggle();
+                });
+
+                $("#btnTV").click(function() {
+                    $("#top_tv_shows").fadeToggle();
+                });
+
+                $("#btnFiction").click(function() {
+                    $("#top_fiction").fadeToggle();
+                });
+
+                $("#btnNonFiction").click(function() {
+                    $("#top_non_fiction").fadeToggle();
+                });
+
+            });
+
+        </script>
+
+        <style>
+            #monkey {
+                background-image: url(https://www.androidcentral.com/sites/androidcentral.com/files/styles/w550h500/public/wallpapers/color-gradient-1uw.jpg?itok=UR__GSnf);
+                background-size: 100% 100%;
+            }
+
+            #donkey {
+                color: azure;
+            }
+
+            .tile {
+                background-image: url(http://cdn.pcwallart.com/images/color-gradient-wallpaper-2.jpg);
+                background-size: 100% 100%;
+                border: 5px solid black;
+            }
+
+            .tile_two {
+                background-image: url(https://cdn-images-1.medium.com/max/1920/1*AcYLHh0_ve4TNRi6HLFcPA.jpeg);
+                background-size: 100% 100%;
+                border: 5px solid black;
+            }
+
+            .tile_three {
+                background-image: url(http://cdn.pcwallart.com/images/metallic-gold-color-wallpaper-2.jpg);
+                background-size: 100% 100%;
+                border: 5px solid black;
+            }
+
+            .tile_four {
+                background-image: url(https://i.pinimg.com/736x/e8/d9/fb/e8d9fb84e1bdddb2a6491f855b8848d9--gradation-color-color-gradient.jpg);
+                background-size: 100% 100%;
+                border: 5px solid black;
+            }
+
+            .tileImage {
+                height: 100%;
+                width: 100%;
+                padding-bottom: 5%;
+                opacity: 0.8;
+            }
+
+            img:hover {
+                opacity: 1.0;
+            }
+
+            body {
+                background-color: black;
+            }
+
+            h3 {
+                font-size: 1.2vw;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+       
+        <div id="monkey" class="jumbotron text-center">
+            <h1 id="donkey"> FAVORITE STUFF </h1> <br>
+            <div class="row">
+                <div class="col-sm-2 col-sm-offset-4">
+                    <button class="btn btn-primary btn-block" id="btnMovies"> MOVIES </button>
+                </div>
+                <div class="col-sm-2">
+                    <button class="btn btn-primary btn-block" id="btnTV"> TV SHOWS </button>
+                </div>
+                <div class="clearfix"></div> <br>
+                <div class="col-sm-2 col-sm-offset-4">
+                    <button class="btn btn-primary btn-block" id="btnFiction"> FICTION </button>
+                </div>
+                <div class="col-sm-2">
+                    <button class="btn btn-primary btn-block" id="btnNonFiction"> NON-FICTION </button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="container" id="top_movies">
+            
+            <div class="row">
+                <div class="col-sm-3 tile">
+                    <h3 class="well text-center"> Mad Max </h3>
+                    <img class="img-responsive tileImage" src="img/mad_max.jpg">
+                </div>
+                <div class="col-sm-3 tile">
+                    <h3 class="well text-center"> Dogville </h3>
+                    <img class="img-responsive tileImage" src="img/dogville.jpg">
+                </div>
+                <div class="col-sm-3 tile">
+                    <h3 class="well text-center"> Edge of Tomorrow </h3>
+                    <img class="img-responsive tileImage" src="img/edge_of_tomorrow.jpg">
+                </div>
+                <div class="col-sm-3 tile">
+                    <h3 class="well text-center"> Princess Mononoke </h3>
+                    <img class="img-responsive tileImage" src="img/princess_mononoke.jpg">
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Spirited Away </h3> 
+                    <img class="img-responsive tileImage" src="img/spirited_away.bjs0mdq4oda7ajsxnze5ndsxmjawozewnjq7nzk4"> 
+                </div>
+                <div class="col-sm-3 tile">
+                    <h3 class="well text-center"> Howl's Moving Castle </h3> 
+                    <img class="img-responsive tileImage" src="img/howls_moving_castle.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Wind Rises </h3> 
+                    <img class="img-responsive tileImage" src="img/the_wind_rises.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Tale Of Princess Kaguya </h3> 
+                    <img class="img-responsive tileImage" src="img/the_tale_of_princess_kaguya.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> When Marnie Was There </h3> 
+                    <img class="img-responsive tileImage" src="img/when_marnie_was_there.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Grave Of The Fireflies </h3> 
+                    <img class="img-responsive tileImage" src="img/grave_of_the_fireflies.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Prestige </h3> 
+                    <img class="img-responsive tileImage" src="img/the_prestige.adszmzu4o2o7mtcxota7mtiwmds0nzi7nzaw"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Inception </h3> 
+                    <img class="img-responsive tileImage" src="img/inception.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Interstellar </h3> 
+                    <img class="img-responsive tileImage" src="img/interstellar.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Batman Begins </h3> 
+                    <img class="img-responsive tileImage" src="img/batman_begins.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Dark Knight </h3> 
+                    <img class="img-responsive tileImage" src="img/the_dark_knight.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Dark Knight Rises </h3> 
+                    <img class="img-responsive tileImage" src="img/the_dark_knight_rises.jpg"> 
+                </div>
+                <div class="col-sm-3 tile"> 
+                    <h3 class="well text-center"> Fellowship Of The Ring </h3> 
+                    <img class="img-responsive tileImage" src="img/fellowship_of_the_ring.jpg"> 
+                </div>
+                <div class="col-sm-3 tile"> 
+                    <h3 class="well text-center"> The Two Towers </h3> 
+                    <img class="img-responsive tileImage" src="img/the_two_towers.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Return of the King </h3> 
+                    <img class="img-responsive tileImage" src="img/return_of_the_king.jpg"> 
+                </div>
+
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Wolf Children </h3> 
+                    <img class="img-responsive tileImage" src="img/wolf_children.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Oldboy </h3> 
+                    <img class="img-responsive tileImage" src="img/oldboy.gif"> 
+                </div>
+                <div class="col-sm-3 tile"> 
+                    <h3 class="well text-center"> A Few Good Men </h3> 
+                    <img class="img-responsive tileImage" src="img/a_few_good_men.jpg"> 
+                </div>
+                <div class="col-sm-3 tile"> 
+                    <h3 class="well text-center"> Casino Royale </h3> 
+                    <img class="img-responsive tileImage" src="img/casino_royale.jpg"> 
+                </div>
+                <div class="col-sm-3 tile"> 
+                    <h3 class="well text-center"> Full Metal Jacket </h3> 
+                    <img class="img-responsive tileImage" src="img/full_metal_jacket.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Warrior </h3> 
+                    <img class="img-responsive tileImage" src="img/warrior.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Three Idiots </h3> 
+                    <img class="img-responsive tileImage" src="img/three_idiots.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Like Stars On Earth </h3> 
+                    <img class="img-responsive tileImage" src="img/like_stars_on_earth.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Talaash </h3> 
+                    <img class="img-responsive tileImage" src="img/talaash.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Bhaag Milkha Bhaag </h3> 
+                    <img class="img-responsive tileImage" src="img/bhaag_milkha_bhaag.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> How To Train Your Dragon </h3> 
+                    <img class="img-responsive tileImage" src="img/how_to_train_your_dragon.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> How To Train Your Dragon 2 </h3> 
+                    <img class="img-responsive tileImage" src="img/how_to_train_your_dragon_2.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Rush </h3> 
+                    <img class="img-responsive tileImage" src="img/rush.aDsxMDUyMTc7ajsxNzE5MTsxMjAwOzUyODs3NTU"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Snowpiercer </h3> 
+                    <img class="img-responsive tileImage" src="img/snowpiercer.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Fruitvale Station </h3> 
+                    <img class="img-responsive tileImage" src="img/fruitvale_station.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Creed </h3> 
+                    <img class="img-responsive tileImage" src="img/creed.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Revenant </h3> 
+                    <img class="img-responsive tileImage" src="img/the_revenant.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Birdman </h3> 
+                    <img class="img-responsive tileImage" src="img/birdman.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Prisoners </h3> 
+                    <img class="img-responsive tileImage" src="img/prisoners.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Harry Potter </h3> 
+                    <img class="img-responsive tileImage" src="img/harry_potter.png"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Marvel Cinematic Universe </h3> 
+                    <img class="img-responsive tileImage" src="img/marvel.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Breakfast Club </h3> 
+                    <img class="img-responsive tileImage" src="img/the_breakfast_club.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Nightcrawler </h3> 
+                    <img class="img-responsive tileImage" src="img/nightcrawler.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Scott Pilgrim Vs The World </h3> 
+                    <img class="img-responsive tileImage" src="img/scott_pilgrim.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Fast And Furious Series </h3> 
+                    <img class="img-responsive tileImage" src="img/fast_and_furious.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Kingsman </h3> 
+                    <img class="img-responsive tileImage" src="img/Kingsman.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Stardust </h3> 
+                    <img class="img-responsive tileImage" src="img/stardust.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Layer Cake </h3> 
+                    <img class="img-responsive tileImage" src="img/layer_cake.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Kickass </h3> 
+                    <img class="img-responsive tileImage" src="img/kickass.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Fury </h3> 
+                    <img class="img-responsive tileImage" src="img/fury.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Dredd </h3> 
+                    <img class="img-responsive tileImage" src="img/dredd.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Last Samurai </h3> 
+                    <img class="img-responsive tileImage" src="img/the_last_samurai.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> T.P.O.B.A.W  </h3> 
+                    <img class="img-responsive tileImage" src="img/the_perks_of_being_a_wallflower.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> We Bought A Zoo </h3> 
+                    <img class="img-responsive tileImage" src="img/we_bought_a_zoo.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Pirates Of The Carribean </h3> 
+                    <img class="img-responsive tileImage" src="img/pirates_of_the_carribean.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Imitation Game </h3> 
+                    <img class="img-responsive tileImage" src="img/the_imitation_game.png"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Avatar </h3> 
+                    <img class="img-responsive tileImage" src="img/avatar.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Boy And The Beast </h3> 
+                    <img class="img-responsive tileImage" src="img/the_boy_and_the_beast.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> About Time </h3> 
+                    <img class="img-responsive tileImage" src="img/about_time.aDsxMDI3MjA7ajsxNzIzNjsxMjAwOzU3NjA7Mzg0MA"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Pumping Iron </h3> 
+                    <img class="img-responsive tileImage" src="img/pumping_iron.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Jiro Dreams Of Sushi </h3> 
+                    <img class="img-responsive tileImage" src="img/jiro_dreams_of_sushi.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center longTitle"> K.O.D.A.M.  </h3> 
+                    <img class="img-responsive tileImage" src="img/kingdom_of_dreams_and_madness.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Lion King </h3> 
+                    <img class="img-responsive tileImage" src="img/lion_king.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Shawshank Redemption </h3> 
+                    <img class="img-responsive tileImage" src="img/shawshank_redemption.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Legends Of The Fall </h3> 
+                    <img class="img-responsive tileImage" src="img/legends_of_the_fall.jpg"> 
+                </div>
+                <div class="col-sm-3 tile"> 
+                    <h3 class="well text-center"> Gladiator </h3> 
+                    <img class="img-responsive tileImage" src="img/gladiator.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> I, Robot </h3> 
+                    <img class="img-responsive tileImage" src="img/i_robot.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Troy </h3> 
+                    <img class="img-responsive tileImage" src="img/troy.aDs2ODM1O2o7MTcyMzU7MTIwMDs1MDA7NzAw"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Incredibles </h3> 
+                    <img class="img-responsive tileImage" src="img/the_incredibles.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Coach Carter </h3> 
+                    <img class="img-responsive tileImage" src="img/coach_carter.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Remember The Titans </h3> 
+                    <img class="img-responsive tileImage" src="img/remember_the_titans.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> 300 </h3> 
+                    <img class="img-responsive tileImage" src="img/300.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Blood Diamond </h3> 
+                    <img class="img-responsive tileImage" src="img/blood_diamond.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Pursuit Of Happyness </h3> 
+                    <img class="img-responsive tileImage" src="img/pursuit_of_hapyness.png"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Man On Fire </h3> 
+                    <img class="img-responsive tileImage" src="img/man_on_fire.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> 21 Jump Street </h3> 
+                    <img class="img-responsive tileImage" src="img/21_jump_street.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> 22 Jump Street </h3> 
+                    <img class="img-responsive tileImage" src="img/22_jump_street.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Hunger Games </h3> 
+                    <img class="img-responsive tileImage" src="img/the_hunger_games.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Man With The Iron Fists </h3> 
+                    <img class="img-responsive tileImage" src="img/the_man_with_the_iron_fists.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Reservoir Dogs </h3> 
+                    <img class="img-responsive tileImage" src="img/reservoir_dogs.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Django Unchained </h3> 
+                    <img class="img-responsive tileImage" src="img/django_unchained.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Inglorious Basterds </h3> 
+                    <img class="img-responsive tileImage" src="img/inglourious_basterds.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Pulp Fiction </h3> 
+                    <img class="img-responsive tileImage" src="img/pulp_fiction.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Town </h3>
+                    <img class="img-responsive tileImage" src="img/the_town.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Fundementals Of Caring </h3> 
+                    <img class="img-responsive tileImage" src="img/the_fundementals_of_caring.png"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Zootopia </h3> 
+                    <img class="img-responsive tileImage" src="img/zootopia.png"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Grand Budapest Hotel </h3> 
+                    <img class="img-responsive tileImage" src="img/the_grand_budapest_hotel.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Moonrise Kingdom </h3> 
+                    <img class="img-responsive tileImage" src="img/moonrise_kingdom.jpg">
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Atonement </h3> 
+                    <img class="img-responsive tileImage" src="img/atonement.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Sing Street </h3> 
+                    <img class="img-responsive tileImage" src="img/sing_street.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Hunt For The Wilderpeople </h3> 
+                    <img class="img-responsive tileImage" src="img/hunt_for_the_wilderpeople.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Dallas Buyers Club </h3> 
+                    <img class="img-responsive tileImage" src="img/dallas_buyers_club.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Cinderella Man </h3> 
+                    <img class="img-responsive tileImage" src="img/cinderella_man.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Bourne Trilogy </h3> 
+                    <img class="img-responsive tileImage" src="img/bourne.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Moonlight </h3> 
+                    <img class="img-responsive tileImage" src="img/moonlight.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Hacksaw Ridge </h3> 
+                    <img class="img-responsive tileImage" src="img/hacksaw_ridge.bTsxMjI0MjE5NTtqOzE3Mjg2OzEyMDA7MzYwMDs1NTUw"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Logan </h3> 
+                    <img class="img-responsive tileImage" src="img/logan.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Lion </h3> 
+                    <img class="img-responsive tileImage" src="img/lion.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Arrival </h3> 
+                    <img class="img-responsive tileImage" src="img/arrival.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Kubo And The Two Strings </h3> 
+                    <img class="img-responsive tileImage" src="img/kubo_and_the_two_strings.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Edge Of Seventeen </h3> 
+                    <img class="img-responsive tileImage" src="img/the_edge_of_seventeen.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Hell Or High Water </h3> 
+                    <img class="img-responsive tileImage" src="img/hell_or_high_water.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Manchester By The Sea </h3> 
+                    <img class="img-responsive tileImage" src="img/manchester_by_the_sea.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Silence </h3> 
+                    <img class="img-responsive tileImage" src="img/silence.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Paterson </h3> 
+                    <img class="img-responsive tileImage" src="img/paterson.aDsxMzU4NDQ7ajsxNzI4MTsxMjAwOzQyNDA7MjgzMg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> In The Mood For Love </h3> 
+                    <img class="img-responsive tileImage" src="img/in_the_mood_for_love.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Hero </h3> 
+                    <img class="img-responsive tileImage" src="img/hero.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Dunkirk </h3> 
+                    <img class="img-responsive tileImage" src="img/dunkirk.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> There Will Be Blood </h3> 
+                    <img class="img-responsive tileImage" src="img/there_will_be_blood.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Before Trilogy </h3>
+                    <img class="img-responsive tileImage" src="img/before_trilogy.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> La La Land </h3> 
+                    <img class="img-responsive tileImage" src="img/la_la_land.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> John Wick </h3> 
+                    <img class="img-responsive tileImage" src="img/john_wick.png"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> John Wick 2 </h3> 
+                    <img class="img-responsive tileImage" src="img/john_wick_2.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center longTitle"> King Arthur </h3> 
+                    <img class="img-responsive tileImage" src="img/king_arthur.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Children Of Men </h3> 
+                    <img class="img-responsive tileImage" src="img/children_of_men.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> American Gangster  </h3> 
+                    <img class="img-responsive tileImage" src="img/american_gangster.aDs2NjUyO2o7MTc1MDU7MTIwMDs0NDI7NzAw"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> The Big Sick  </h3> 
+                    <img class="img-responsive tileImage" src="img/the_big_sick.aDsxMzc1MTc7ajsxNzUwNjsxMjAwOzY3NTI7NTMwNA"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> Wind River  </h3> 
+                    <img class="img-responsive tileImage" src="img/wind_river.jpg"> 
+                </div>
+                <div class="col-sm-3 tile">  
+                    <h3 class="well text-center"> A Silent Voice  </h3> 
+                    <img class="img-responsive tileImage" src="img/a_silent_voice.jpg"> 
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Movies -->
+
+        <div class="container" id="top_tv_shows">
+            <div class="row">
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center"> Game Of Thrones</h3> 
+                    <img class="img-responsive tileImage" src="img/Game_of_thrones.jpg">
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center"> Stranger Things </h3> 
+                    <img class="img-responsive tileImage" src="img/stranger_things.jpg">
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center"> Smallville </h3> 
+                    <img class="img-responsive tileImage" src="img/smallville.jpg">
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center"> FMA: Brotherhood </h3> 
+                    <img class="img-responsive tileImage" src="img/fullmetal_alchemist_brotherhood.jpg">
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Rick and Morty</h3> 
+                    <img class="img-responsive tileImage" src="img/rick_and_morty.png"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Narcos</h3> 
+                    <img class="img-responsive tileImage" src="img/narcos.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Black Mirror</h3> 
+                    <img class="img-responsive tileImage" src="img/black_mirror.png"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">The Office</h3> 
+                    <img class="img-responsive tileImage" src="img/the_office.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Breaking Bad</h3> 
+                    <img class="img-responsive tileImage" src="img/breaking_bad.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Rome</h3> 
+                    <img class="img-responsive tileImage" src="img/rome.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">The Wire</h3> 
+                    <img class="img-responsive tileImage" src="img/the_wire.jpg">
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Band of Brothers</h3> 
+                    <img class="img-responsive tileImage" src="img/band_of_brothers.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Harmonquest</h3> 
+                    <img class="img-responsive tileImage" src="img/harmonquest.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Letterkenny</h3> 
+                    <img class="img-responsive tileImage" src="img/letterkenny.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">House</h3> 
+                    <img class="img-responsive tileImage" src="img/House.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Parks and Rec</h3> 
+                    <img class="img-responsive tileImage" src="img/parks_and_rec.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Community</h3> 
+                    <img class="img-responsive tileImage" src="img/community.png"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Spartacus</h3> 
+                    <img class="img-responsive tileImage" src="img/spartacus.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Friends</h3> 
+                    <img class="img-responsive tileImage" src="img/friends.png"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Samurai Champloo</h3> 
+                    <img class="img-responsive tileImage" src="img/samurai_champloo.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Cowboy Bebop</h3> 
+                    <img class="img-responsive tileImage" src="img/cowboy_bebop.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Steins Gate</h3> 
+                    <img class="img-responsive tileImage" src="img/steins_gate.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Berserk</h3> 
+                    <img class="img-responsive tileImage" src="img/beserk.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Erased</h3> 
+                    <img class="img-responsive tileImage" src="img/erased.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Inuyasha</h3> 
+                    <img class="img-responsive tileImage" src="img/Inuyasha.png"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Afro Samurai</h3> 
+                    <img class="img-responsive tileImage" src="img/afro_samurai.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Samurai 7</h3> 
+                    <img class="img-responsive tileImage" src="img/Samurai_7.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Hannibal</h3> 
+                    <img class="img-responsive tileImage" src="img/hannibal.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">The OC</h3> 
+                    <img class="img-responsive tileImage" src="img/the_oc.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Firefly</h3> 
+                    <img class="img-responsive tileImage" src="img/firefly.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">House of Cards</h3> 
+                    <img class="img-responsive tileImage" src="img/house_of_cards.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Homeland</h3> 
+                    <img class="img-responsive tileImage" src="img/homeland.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Dexter</h3> 
+                    <img class="img-responsive tileImage" src="img/dexter.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Marco Polo</h3> 
+                    <img class="img-responsive tileImage" src="img/marco_polo.jpg">
+                </div>
+                <div class="col-sm-3 tile_two">  
+                    <h3 class="well text-center">Cosmos</h3> 
+                    <img class="img-responsive tileImage" src="img/cosmos.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div id="top_fiction" class="container">
+            <div class="row">
+                <div class="col-sm-3 tile_three">  
+                    <h3 class="well text-center">A Song Of Ice And Fire </h3> 
+                    <img class="img-responsive tileImage" src="img/a_song_of_ice_and_fire.jpg"> 
+                </div>
+
+                <div class="col-sm-3 tile_three">  	
+                    <h3 class="well text-center"> Under Heaven </h3> 	
+                    <img class="img-responsive tileImage" src="img/under_heaven.jpg"> 	
+                </div>
+                <div class="col-sm-3 tile_three"> 
+                    <h3 class="well text-center"> River Of Stars </h3> 
+                    <img class="img-responsive tileImage" src="img/river_of_stars.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_three"> 
+                    <h3 class="well text-center"> Harry Potter </h3> 	
+                    <img class="img-responsive tileImage" src="img/harry_potter_books.jpg"> 	
+                </div>
+                <div class="col-sm-3 tile_three"> 
+                    <h3 class="well text-center"> Frankenstein </h3> 	
+                    <img class="img-responsive tileImage" src="img/frankenstein.jpg"> 	
+                </div>
+                <div class="col-sm-3 tile_three"> 
+                    <h3 class="well text-center"> Powder Mage </h3> 
+                    <img class="img-responsive tileImage" src="img/powder_mage.jpg"> 	
+                </div>
+                <div class="col-sm-3 tile_three"> 
+                    <h3 class="well text-center"> Codex Alera </h3> 
+                    <img class="img-responsive tileImage" src="img/codex_alera.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_three"> 
+                    <h3 class="well text-center"> First Law	</h3> 	
+                    <img class="img-responsive tileImage" src="img/the_first_law.jpg"> 	
+                </div>
+                <div class="col-sm-3 tile_three"> 
+                    <h3 class="well text-center"> Riyria Revelations </h3> 	
+                    <img class="img-responsive tileImage" src="img/riyria_revelations.jpg"> 
+                </div>
+            </div>
+        </div>
+
+        <div id="top_non_fiction" class="container">
+            <div class="row">
+                <div class="col-sm-3 tile_four"> 	 
+                    <h3 class="well text-center"> The Power of Habit </h3> 	
+                    <img class="img-responsive tileImage" src="img/the_power_of_habit.jpg"> 	
+                </div>
+                <div class="col-sm-3 tile_four"> 	 
+                    <h3 class="well text-center"> Lying </h3> 
+                    <img class="img-responsive tileImage" src="img/lying.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_four"> 
+                    <h3 class="well text-center"> The War of Art </h3> 
+                    <img class="img-responsive tileImage" src="img/the_war_of_art.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_four"> 
+                    <h3 class="well text-center"> S.G.T.C.I.Y. </h3> 
+                    <img class="img-responsive tileImage" src="img/so_good_they_cant_ignore_you.jpg"> 
+                </div>
+                <div class="col-sm-3 tile_four"> 
+                    <h3 class="well text-center"> The Second Machine Age </h3> 
+                    <img class="img-responsive tileImage" src="img/the_second_machine_age.jpg"> 
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
