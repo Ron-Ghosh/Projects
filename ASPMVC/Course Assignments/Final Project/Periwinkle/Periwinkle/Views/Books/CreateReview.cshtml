@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "CreateReview";
+}
+
+@{ 
+    string bn = ViewBag.BookName;
+    string rn = ViewBag.ReviewerName;
+}
+
+@using (Html.BeginForm("CreateReview","Books",FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <h4>Book Review</h4>
+
+        <hr />
+
+        <div class="form-group">
+            @Html.Label("Book Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.Label(bn, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Reviewer Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.Label(rn, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Review", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextArea("Review", new { htmlAttributes = new { @class = "form-control", @rows = "5" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+

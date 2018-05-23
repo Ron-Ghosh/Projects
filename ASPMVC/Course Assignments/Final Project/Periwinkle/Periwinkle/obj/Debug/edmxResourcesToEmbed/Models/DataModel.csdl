@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Copies" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Rentals" Relationship="Self.FK__Rentals__Book_Id__286302EC" FromRole="Books" ToRole="Rentals" />
+    <NavigationProperty Name="Reviews" Relationship="Self.FK__Reviews__Book_Id__2C3393D0" FromRole="Books" ToRole="Reviews" />
+    <NavigationProperty Name="Wishlists" Relationship="Self.FK__Wishlists__Book___300424B4" FromRole="Books" ToRole="Wishlists" />
+  </EntityType>
+  <EntityType Name="Rental">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Book_Id" Type="Int32" />
+    <Property Name="User_Id" Type="Int32" />
+    <Property Name="Sign_Out_Date" Type="DateTime" Precision="0" />
+    <Property Name="Return_Date" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Book" Relationship="Self.FK__Rentals__Book_Id__286302EC" FromRole="Rentals" ToRole="Books" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Rentals__User_Id__29572725" FromRole="Rentals" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Review">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Book_Id" Type="Int32" />
+    <Property Name="User_Id" Type="Int32" />
+    <Property Name="Review1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Book" Relationship="Self.FK__Reviews__Book_Id__2C3393D0" FromRole="Reviews" ToRole="Books" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Reviews__User_Id__2D27B809" FromRole="Reviews" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Pass_Hash" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Privilege" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Rentals" Relationship="Self.FK__Rentals__User_Id__29572725" FromRole="Users" ToRole="Rentals" />
+    <NavigationProperty Name="Reviews" Relationship="Self.FK__Reviews__User_Id__2D27B809" FromRole="Users" ToRole="Reviews" />
+    <NavigationProperty Name="Wishlists" Relationship="Self.FK__Wishlists__User___30F848ED" FromRole="Users" ToRole="Wishlists" />
+  </EntityType>
+  <EntityType Name="Wishlist">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Book_Id" Type="Int32" />
+    <Property Name="User_Id" Type="Int32" />
+    <NavigationProperty Name="Book" Relationship="Self.FK__Wishlists__Book___300424B4" FromRole="Wishlists" ToRole="Books" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Wishlists__User___30F848ED" FromRole="Wishlists" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK__Rentals__Book_Id__286302EC">
+    <End Role="Books" Type="Self.Book" Multiplicity="0..1" />
+    <End Role="Rentals" Type="Self.Rental" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Rentals">
+        <PropertyRef Name="Book_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reviews__Book_Id__2C3393D0">
+    <End Role="Books" Type="Self.Book" Multiplicity="0..1" />
+    <End Role="Reviews" Type="Self.Review" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reviews">
+        <PropertyRef Name="Book_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Wishlists__Book___300424B4">
+    <End Role="Books" Type="Self.Book" Multiplicity="0..1" />
+    <End Role="Wishlists" Type="Self.Wishlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Wishlists">
+        <PropertyRef Name="Book_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Rentals__User_Id__29572725">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Rentals" Type="Self.Rental" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Rentals">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reviews__User_Id__2D27B809">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Reviews" Type="Self.Review" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reviews">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Wishlists__User___30F848ED">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Wishlists" Type="Self.Wishlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Wishlists">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ContextClass" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Books" EntityType="Self.Book" />
+    <EntitySet Name="Rentals" EntityType="Self.Rental" />
+    <EntitySet Name="Reviews" EntityType="Self.Review" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Wishlists" EntityType="Self.Wishlist" />
+    <AssociationSet Name="FK__Rentals__Book_Id__286302EC" Association="Self.FK__Rentals__Book_Id__286302EC">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="Rentals" EntitySet="Rentals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reviews__Book_Id__2C3393D0" Association="Self.FK__Reviews__Book_Id__2C3393D0">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="Reviews" EntitySet="Reviews" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Wishlists__Book___300424B4" Association="Self.FK__Wishlists__Book___300424B4">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="Wishlists" EntitySet="Wishlists" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Rentals__User_Id__29572725" Association="Self.FK__Rentals__User_Id__29572725">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Rentals" EntitySet="Rentals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reviews__User_Id__2D27B809" Association="Self.FK__Reviews__User_Id__2D27B809">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Reviews" EntitySet="Reviews" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Wishlists__User___30F848ED" Association="Self.FK__Wishlists__User___30F848ED">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Wishlists" EntitySet="Wishlists" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

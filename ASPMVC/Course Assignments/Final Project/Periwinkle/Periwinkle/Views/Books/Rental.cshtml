@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Rental";
+}
+
+@{
+    string bn = ViewBag.BookName;
+    string rn = ViewBag.RenterName;
+}
+
+@using (Html.BeginForm("Rental", "Books", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <h4>Confirm Book Rental</h4>
+
+        <hr />
+
+        <div class="form-group">
+            @Html.Label("Book Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.Label(bn, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Renter Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.Label(rn, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Confirm" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+

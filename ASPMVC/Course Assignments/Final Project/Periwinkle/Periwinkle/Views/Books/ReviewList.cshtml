@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Periwinkle.Models.Review>
+
+@{
+    ViewBag.Title = "ReviewList";
+}
+
+<h2>ReviewList</h2>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Review</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.First_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Review1)
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+

@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Assignment.master.cs" Inherits="HospitalAssignment.Assignment" %>
+
+<!DOCTYPE html>
+
+<%--This is the master page for both the Login and the LoginAdmin page
+    It has the basic styling and template--%>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Hospital Portal</title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        .time-font {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .background {
+            background-image: url("https://www.dentons.com/-/media/images/website/background-images/industry-sectors/life-sciences-and-health-care/956_health_care_02_1900x1500.jpg");
+            background-size: 100%;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body class="background">
+    <form id="form1" runat="server">
+        <div class="well col-xs-12">
+            <%--<asp:Menu ID="Menu1" runat="server">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login" Value="Login"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Register.aspx" Text="Register" Value="Register"></asp:MenuItem>
+                </Items>
+            </asp:Menu>--%>
+
+            <ul class="nav nav-tabs">
+                <li>
+                    <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-link" OnClick="btnLogin_Click" /></li>
+                <li>
+                    <asp:Button ID="btnAdmin" runat="server" Text="Admin" CssClass="btn btn-link" OnClick="btnAdmin_Click" /></li>
+            </ul>
+        </div>
+
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+    </form>
+
+
+</body>
+</html>

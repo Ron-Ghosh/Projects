@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="32ec3dcb640c4686b7113424b6aa0ba3" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="Models.book" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.rental" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.user" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Wishlist" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Models.FK__rentals__Book_Id__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__Wishlist__Book_I__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__rentals__User_Id__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__Wishlist__User_I__03F0984C" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Models.bookreview" Width="1.5" PointX="6" PointY="5.75" />
+        <AssociationConnector Association="Models.FK__bookrevie__Book___29221CFB" />
+        <AssociationConnector Association="Models.FK__bookrevie__User___2A164134" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

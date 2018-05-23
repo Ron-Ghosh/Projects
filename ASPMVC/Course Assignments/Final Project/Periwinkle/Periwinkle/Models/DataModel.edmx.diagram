@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dd9d1663ccc24b64b9be25eb04ae2586" Name="Diagram1">
+        <EntityTypeShape EntityType="Models.Book" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Rental" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Review" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.User" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Wishlist" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="Models.FK__Rentals__Book_Id__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__Reviews__Book_Id__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__Wishlists__Book___300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__Rentals__User_Id__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__Reviews__User_Id__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__Wishlists__User___30F848ED" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

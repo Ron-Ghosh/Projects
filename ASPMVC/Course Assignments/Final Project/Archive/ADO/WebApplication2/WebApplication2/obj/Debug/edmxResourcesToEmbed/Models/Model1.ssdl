@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="bookreviews">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Book_Id" Type="int" />
+    <Property Name="User_Id" Type="int" />
+    <Property Name="Review" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="books">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Author" Type="varchar" MaxLength="50" />
+    <Property Name="copies" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rentals">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Book_Id" Type="int" />
+    <Property Name="User_Id" Type="int" />
+    <Property Name="Sign_Out_Date" Type="date" />
+    <Property Name="Return_Date" Type="date" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Pass_Hash" Type="varchar" MaxLength="50" />
+    <Property Name="privilege" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Wishlist">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Book_Id" Type="int" />
+    <Property Name="User_Id" Type="int" />
+  </EntityType>
+  <Association Name="FK__bookrevie__Book___29221CFB">
+    <End Role="books" Type="Self.books" Multiplicity="0..1" />
+    <End Role="bookreviews" Type="Self.bookreviews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="books">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="bookreviews">
+        <PropertyRef Name="Book_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__bookrevie__User___2A164134">
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <End Role="bookreviews" Type="Self.bookreviews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="bookreviews">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__rentals__Book_Id__49C3F6B7">
+    <End Role="books" Type="Self.books" Multiplicity="0..1" />
+    <End Role="rentals" Type="Self.rentals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="books">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="rentals">
+        <PropertyRef Name="Book_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__rentals__User_Id__6E01572D">
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <End Role="rentals" Type="Self.rentals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="rentals">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Wishlist__Book_I__02FC7413">
+    <End Role="books" Type="Self.books" Multiplicity="0..1" />
+    <End Role="Wishlist" Type="Self.Wishlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="books">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Wishlist">
+        <PropertyRef Name="Book_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Wishlist__User_I__03F0984C">
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <End Role="Wishlist" Type="Self.Wishlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Wishlist">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelsStoreContainer">
+    <EntitySet Name="bookreviews" EntityType="Self.bookreviews" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="books" EntityType="Self.books" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rentals" EntityType="Self.rentals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Wishlist" EntityType="Self.Wishlist" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__bookrevie__Book___29221CFB" Association="Self.FK__bookrevie__Book___29221CFB">
+      <End Role="books" EntitySet="books" />
+      <End Role="bookreviews" EntitySet="bookreviews" />
+    </AssociationSet>
+    <AssociationSet Name="FK__bookrevie__User___2A164134" Association="Self.FK__bookrevie__User___2A164134">
+      <End Role="users" EntitySet="users" />
+      <End Role="bookreviews" EntitySet="bookreviews" />
+    </AssociationSet>
+    <AssociationSet Name="FK__rentals__Book_Id__49C3F6B7" Association="Self.FK__rentals__Book_Id__49C3F6B7">
+      <End Role="books" EntitySet="books" />
+      <End Role="rentals" EntitySet="rentals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__rentals__User_Id__6E01572D" Association="Self.FK__rentals__User_Id__6E01572D">
+      <End Role="users" EntitySet="users" />
+      <End Role="rentals" EntitySet="rentals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Wishlist__Book_I__02FC7413" Association="Self.FK__Wishlist__Book_I__02FC7413">
+      <End Role="books" EntitySet="books" />
+      <End Role="Wishlist" EntitySet="Wishlist" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Wishlist__User_I__03F0984C" Association="Self.FK__Wishlist__User_I__03F0984C">
+      <End Role="users" EntitySet="users" />
+      <End Role="Wishlist" EntitySet="Wishlist" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

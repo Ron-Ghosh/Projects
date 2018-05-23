@@ -1,0 +1,57 @@
+﻿@model Periwinkle.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+    string imageId = Model.Id.ToString();
+    string pathName = "~/Images/" + imageId + ".jpg";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Copies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Copies)
+        </dd>
+
+        <br />
+
+        <dt>
+            Cover
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(pathName)" class="img-thumbnail" style="height:250px" />
+        </dd>
+
+    </dl>
+
+</div>
+
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
