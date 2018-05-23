@@ -1,0 +1,27 @@
+-- Exercise DB -- 
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Crunch', 'crunch.jpg', 'Isolation', 'Abs');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Russian Twist', 'russian_twist.jpg', 'Isolation', 'Abs');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Leg Raise', 'leg_raise.jpg', 'Isolation', 'Abs');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Pushdown', 'pushdown.jpg', 'Isolation', 'Arm');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Triceps Extension', 'triceps_extension.jpg', 'Isolation', 'Arm');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Barbell Curl', 'barbell_curl.jpg', 'Isolation', 'Arm');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Lat Pulldown', 'lat_pulldown.jpg', 'Compound', 'Back');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Pullup', 'pullup.jpg', 'Compound', 'Back');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Bent Over Row', 'bent_over_row.jpg', 'Compound', 'Back');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Back Extension', 'back_extension.jpg', 'Isolation', 'Back');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Bench Press', 'bench_press.jpg', 'Compound', 'Chest');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Pushup', 'pushup.jpg', 'Compound', 'Chest');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Chest Fly', 'chest_fly.jpg', 'Isolation', 'Chest');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Squat', 'squat.jpg', 'Compound', 'Leg');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Leg Press', 'leg_press.jpg', 'Compound', 'Leg');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Lunge', 'lunge.jpg', 'Compound', 'Leg');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Deadlift', 'deadlift.jpg', 'Compound', 'Leg');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Leg Extension', 'leg_extension.jpg', 'Isolation', 'Leg');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Leg Curl', 'leg_curl.jpg', 'Isolation', 'Leg');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Standing Calf Raise', 'standing_calf_raise.jpg', 'Isolation', 'Leg');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Seated Calf Raise', 'seated_calf_raise.jpg', 'Isolation', 'Leg');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Hip Adductor', 'hip_adductor.jpg', 'Isolation', 'Leg');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Shoulder Press', 'shoulder_press.jpg', 'Compound', 'Shoulder');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Shoulder Shrug', 'shoulder_shrug.jpg', 'Compound', 'Shoulder');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Upright Row', 'upright_row.jpg', 'Isolation', 'Shoulder');
+INSERT INTO EXERCISES (Exercise, Image, Type, Primary_Muscle) VALUES ('Shoulder Fly', 'shoulder_fly.jpg', 'Isolation', 'Shoulder');
