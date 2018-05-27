@@ -1,0 +1,37 @@
+﻿@model FullStackTest.Models.CLIENT
+
+<div>
+    <h4>CLIENT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.First)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.First)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Last)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Last)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

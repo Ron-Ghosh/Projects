@@ -1,0 +1,26 @@
+[
+	{
+		"Name": "2017 MINI COOPER CLUBMAN ALL4",
+		"Price": "$32,997.00",
+		"Photo": "img/99b0164a-089e-400b-9b89-42718e30db4a.jpg",
+		"Retailer": "MINI St. Catharines",
+		"Kilometres": "13,095",
+		"Transmission": "Automatic",
+		"Exterior": "Pepper White",
+		"Interior": "Carbon Black Leatherette",
+		"VIN": "2F27071",
+		"DriveTrain": "AWD"
+	},
+	{
+		"Name": "2017 MINI COOPER COUNTRYMAN ALL4",
+		"Price": "$40,187.25.00",
+		"Photo": "img/4004618_259920343.jpg",
+		"Retailer": "MINI Calgary",
+		"Kilometres": "6,948",
+		"Transmission": "Automatic",
+		"Exterior": "Chestnut",
+		"Interior": "Carbon Black Leatherette",
+		"VIN": "2F27071",
+		"DriveTrain": "AWD"
+	}
+]

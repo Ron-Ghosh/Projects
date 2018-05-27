@@ -1,0 +1,45 @@
+﻿@model IEnumerable<FullStackTest.Models.CLIENT>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="title" class="text-center jumbotron">
+    <h2 class="text-center">Clients</h2>
+    Time of Page Load: @DateTime.Now.ToLongTimeString()
+    <br />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        function ClearResults() {
+            $("#divClients").empty();
+        }
+    </script>
+</div>
+
+
+<div id="optionBar">
+
+    @Ajax.ActionLink("Full List", "All", new AjaxOptions
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divClients",
+    InsertionMode = InsertionMode.Replace,
+    OnBegin = "ClearResults"
+})
+
+    <span style="color:black">||</span>
+
+    @Ajax.ActionLink("Create", "Create", new AjaxOptions
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divClients",
+    InsertionMode = InsertionMode.Replace,
+    OnBegin = "ClearResults"
+})
+</div>
+
+
+<div id="divClients" class="well">
+    @* Placeholder for the content *@
+</div>

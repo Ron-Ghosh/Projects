@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Front End Exam</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+
+        #headerImage {
+            opacity: 0.5;
+        }
+
+        iframe, object, embed {
+            max-width: 100%;
+        }
+
+        #headerImage:hover {
+            opacity: 1.0;
+        }
+
+        .descriptionDiv {
+            /*border: 1px solid black;*/
+        }
+
+        h4, h3, h2, p, td {
+            color: white;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .modal-content {
+            background-color:black;
+        }
+
+        #body {
+            background-color: black;
+        }
+
+        .vertical-center {
+            min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+            min-height: 100vh; /* These two lines are counted as one :-)       */
+            display: flex;
+            align-items: center;
+        }
+
+        /* Makes the columns of equal height */
+        .row {
+            overflow: hidden;
+        }
+
+        [class*="col-"] {
+            margin-bottom: -99999px;
+            padding-bottom: 99999px;
+        }
+
+        .smallPic {
+            height: 10%;
+        }
+
+        .firstrow > td {
+            font-family: Georgia, Times, serif;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body id="body">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <!-- Trigger the modal with a button -->
+                <div class="text-center">
+                    <button type="button" class="btn-default btn-sm" data-toggle="modal" data-target="#myModal">
+                        <img id="headerImage" src="img/header.jpg" class="img-thumbnail"/>
+                    </button>
+                </div>
+                
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h3 class="modal-title text-center"> SEE THE FUTURE</h3>
+                            </div>
+                            <div class="text-center">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ldjmb15Jsx0"
+                                        frameborder="0" allow="encrypted-media" allowfullscreen name="iframe_video1"></iframe>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger btn-block" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="text-center">
+                    <p>TAKE YOUR PICK.</p>
+                    <h2>THE MINI ALL4 LINEUP.</h2>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 descriptionDiv">
+                <div class="vertical-center">
+                    <div class="text-center">
+                        <h3>THE MINI COUNTRYMAN ALL 4</h3>
+                        <p>The rugged adventurer for living life to the fullest. Built with ample interior space and an array of practical features, it is designed to both inspire and accomodate your next great story. </p>
+                        <button class="btn btn-primary">LEARN MORE</button> <br> <br>
+                        <button class="btn btn-primary">BUILD &amp; PRICE</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 descriptionDiv">
+                <div class="text-center">
+                    <div class="vertical-center">
+                        <img src="img/4004618_259920343.jpg" class="img-thumbnail">
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="col-xs-12 col-md-6 descriptionDiv">
+                <div class="text-center">
+                    <div class="vertical-center">
+                        <img src="img/99b0164a-089e-400b-9b89-42718e30db4a.jpg" class="img-thumbnail">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 descriptionDiv">
+                <div class="vertical-center">
+                    <div class="text-center">
+                        <h3>THE MINI CLUBMAN ALL 4</h3>
+                        <p>The most refined MINI ever made, featuring an exquisitely crafted cabin outfitted with top-shelf finishes and cutting-edge technology. Spacious and sophisticated; premium yet practical; it's the mini for every occasion. </p>
+                        <button class="btn btn-primary">LEARN MORE</button> <br> <br>
+                        <button class="btn btn-primary">BUILD &amp; PRICE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="table-responsive">
+                    <table id="carTable" class="table table-bordered">
+                        <tr class="firstrow">
+                            <td>Name</td>
+                            <td>Price</td>
+                            <td>Photo</td>
+                            <td>Retailer</td>
+                            <td>Kilometers</td>
+                            <td>Transmission</td>
+                            <td>Exterior</td>
+                            <td>Interior</td>
+                            <td>VIN</td>
+                            <td>DriveTrain</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON("https://raw.githubusercontent.com/RichmondDay/public/master/test_vehicle_inventory_data.json", function (data) {
+                var vehicle_data = '';
+                $.each(data, function (key, value) {
+                    vehicle_data += '<tr>';
+                    vehicle_data += '<td> <strong>' + value.Name + '</strong></td>';
+                    vehicle_data += '<td>' + value.Price + '</td>';
+                    vehicle_data += '<td> <img src="' + value.Photo + '" class="smallPic"></td>';
+                    vehicle_data += '<td>' + value.Retailer + '</td>';
+                    vehicle_data += '<td>' + value.Kilometres + '</td>';
+                    vehicle_data += '<td>' + value.Transmission + '</td>';
+                    vehicle_data += '<td>' + value.Exterior + '</td>';
+                    vehicle_data += '<td>' + value.Interior + '</td>';
+                    vehicle_data += '<td>' + value.VIN + '</td>';
+                    vehicle_data += '<td>' + value.DriveTrain + '</td>';
+                    vehicle_data += '<td> <div class="btn-group"> <button type="button" class="btn btn-small btn-primary">VIEW DETAILS</button> <button type="button" class="btn btn-small btn-primary">BOOK A TEST DRIVE</button></div>';
+                    vehicle_data += '</tr>';
+                });
+                $('#carTable').append(vehicle_data);
+            });
+        });
+
+    </script>
+
+</body>
+</html>
