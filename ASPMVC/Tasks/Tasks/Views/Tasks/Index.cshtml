@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div id="title" class="text-center panel">
+    <h2 class="text-center">List of Tasks</h2>
+    Time of Page Load: @DateTime.Now.ToLongTimeString()
+    <br />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        function ClearResults() {
+            $("#divContent").empty();
+        }
+    </script>
+</div>
+
+<div id="option-bar" class="text-center">
+    @Ajax.ActionLink("List All Tasks", "TaskList", null, new AjaxOptions
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divContent",
+    InsertionMode = InsertionMode.Replace,
+    OnBegin = "ClearResults"
+},
+new { @class = "btn btn-default" })
+
+    @Ajax.ActionLink("Create New Task", "Create", null, new AjaxOptions
+   {
+       HttpMethod = "GET",
+       UpdateTargetId = "divContent",
+       InsertionMode = InsertionMode.Replace,
+       OnBegin = "ClearResults"
+   },
+new { @class = "btn btn-default" })
+</div>
+
+<hr />
+
+<div id="divContent" class="panel panel-default">
+
+</div>
+
+
+

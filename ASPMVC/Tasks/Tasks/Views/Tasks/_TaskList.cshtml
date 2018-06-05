@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Tasks.Models.Task>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duedate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duedate)
+            </td>
+            <td>
+                @Ajax.ActionLink("Edit", "Edit", new { id = item.Id }, new AjaxOptions
+           {
+               HttpMethod = "GET",
+               UpdateTargetId = "divContent",
+               InsertionMode = InsertionMode.Replace,
+               OnBegin = "ClearResults",
+           }) ||
+                @Ajax.ActionLink("Delete", "Delete", new { id = item.Id }, new AjaxOptions
+           {
+               HttpMethod = "GET",
+               UpdateTargetId = "divContent",
+               InsertionMode = InsertionMode.Replace,
+               OnBegin = "ClearResults",
+           }) 
+            </td>
+        </tr>
+    }
+
+</table>
